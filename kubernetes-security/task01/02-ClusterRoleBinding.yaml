@@ -4,7 +4,7 @@ metadata:
   name: bob-cluster-admin
 subjects:
 - kind: User
-  name: bob
+  name: system:serviceaccount:default:bob
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: ClusterRole
