@@ -29,7 +29,7 @@ spec:
             path: /index.html
             port: 8000
         volumeMounts:
-          - name: app
+          - name: web
             mountPath: /app
       initContainers:
         - name: html-gen
