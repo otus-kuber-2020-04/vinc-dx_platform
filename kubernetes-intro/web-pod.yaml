@@ -15,6 +15,12 @@ spec:
   containers:
   - name: web
     image: gladskikh/otus-hw1:latest
+    livenessProbe:
+      tcpSocket: { port: 8000 }
+    readinessProbe: # Добавим проверку готовности
+      httpGet: # веб-сервера отдавать
+        path: /index.html # контент
+        port: 80
     volumeMounts:
     - name: app
       mountPath: /app
