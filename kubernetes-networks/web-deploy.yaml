@@ -36,8 +36,8 @@ spec:
           image: busybox:musl
           command: ['sh', '-c', 'wget -O- https://bit.ly/otus-k8s-index-gen | sh']
           volumeMounts:
-            - name: app
+            - name: web
               mountPath: /app
       volumes:
-        - name: app
+        - name: web
           emptyDir: {}
