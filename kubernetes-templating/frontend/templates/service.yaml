@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  labels:
+    app: frontend
+spec:
+  selector:
+    app: frontend
+{{- if .Values.service.type }}
+  type: {{ .Values.service.type }}
+{{- else }}
+  type: NodePort
+{{- end }}
+  ports:
+  - name: {{ .Values.service.name }}
+    port: {{ .Values.service.port }}
+    targetPort: {{ .Values.service.targetPort }}
+{{- if eq .Values.service.type "NodePort" }}
+    nodePort: {{ .Values.service.NodePort }}
+{{- end }}
