@@ -1,16 +1,17 @@
-# vinc-dx_platform
+HW 8
 
----
-# Домашка 1 (kubernetes-intro)
-В виртуалку c ubuntu 18.04 установлен minikube, kubectl
-Запущен кластер kubernetes, добавлен dashboard
+```
+NAME                         COMPLETIONS   DURATION   AGE
+backup-mysql-instance-job    1/1           2s         12m
+restore-mysql-instance-job   1/1           43s        11m
+```
 
-Проверена работоспособность, удаление всех подов из namesapce kube-system: 
-    - Часть подов в namespace kube-system запускаются kubelet'ом (/etc/kubernetes/manifests):
-    etcd, kube-apiserver, kube-controller-manager, kube-scheduler
-     - Часть из DaemonSet, Deployment и т.д.:
-    coredns, kube-proxy
-
-Создан образ с "web сервером", проверена работа.
-Выполнено доп.задание - frontend от Hipster Shop
----
+```
+mysql: [Warning] Using a password on the command line interface can be insecure.
++----+-------------+
+| id | name        |
++----+-------------+
+|  1 | some data   |
+|  2 | some data-2 |
++----+-------------+
+```
